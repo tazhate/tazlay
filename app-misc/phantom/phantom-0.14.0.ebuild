@@ -4,9 +4,11 @@
 
 EAPI="4"
 
-EGIT_REPO_URI="git://github.com/mamchits/phantom.git http://github.com/mamchits/phantom.git"
+EGIT_REPO_URI="http://github.com/mamchits/phantom.git"
 
-DESCRIPTION="I/o engine with modules"
+inherit eutils git-2
+
+DESCRIPTION="I/O engine with modules"
 HOMEPAGE="https://github.com/mamchits/phantom"
 SRC_URI=""
 
@@ -18,10 +20,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-src_configure() {
-}
 
 src_install() {
-    append-flags "-R"
-    emake DESTDIR="${D}" install
+    emake -R DESTDIR="${D}" install
 }
