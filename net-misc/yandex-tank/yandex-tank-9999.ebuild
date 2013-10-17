@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-python/lxml dev-python/ipaddr dev-python/progressbar dev-python/psutil dev-python/sqlalchemy"
