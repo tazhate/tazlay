@@ -25,6 +25,6 @@ RDEPEND="${DEPEND}"
 
 
 src_install() {
-    emake -R DESTDIR="${D}" install
-    dobin phantom
+    emake -R DESTDIR="${D}"
+    dobin bin/phantom
 }
