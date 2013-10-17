@@ -12,6 +12,9 @@ DESCRIPTION="I/O engine with modules"
 HOMEPAGE="https://github.com/mamchits/phantom"
 SRC_URI=""
 
+# dirty hack :(
+MAKEOPTS="-R"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
