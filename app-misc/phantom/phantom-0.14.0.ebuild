@@ -4,20 +4,24 @@
 
 EAPI="4"
 
+EGIT_REPO_URI="git://github.com/mamchits/phantom.git http://github.com/mamchits/phantom.git"
+
 DESCRIPTION="I/o engine with modules"
 HOMEPAGE="https://github.com/mamchits/phantom"
 SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_configure() {
-        # --enable-debug  do not strip debugging symbols (default no)
-        econf --enable-debug
 }
 
+src_install() {
+    append-flags "-R"
+    emake DESTDIR="${D}" install
+}
