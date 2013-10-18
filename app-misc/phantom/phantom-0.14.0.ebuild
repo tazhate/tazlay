@@ -26,4 +26,5 @@ src_compile() {
 
 src_install() {
     dobin bin/phantom
+    dolib lib/phantom
 }
