@@ -2,10 +2,12 @@
 # Copyright Yandex
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="4"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-PYTHON_DEPEND="2"
+EAPI="5"
+
+EGIT_REPO_URI="https://github.com/yandex-load/yandex-tank.git"
+PYTHON_COMPAT=( python2_{6,7} )
+
+inherit bash-completion-r1 git-r3 python-r1
 
 DESCRIPTION="Console application to test websites perfomance"
 HOMEPAGE="https://github.com/yandex-load/yandex-tank"
@@ -13,19 +15,25 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE=""
+KEYWORDS=""
 
-DEPEND="dev-python/lxml
-	dev-python/ipaddr
-	dev-python/progressbar
-	dev-python/psutil
-	dev-python/sqlalchemy"
-RDEPEND="${DEPEND}"
+RDEPEND="${PYTHON_DEPS}
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/ipaddr[${PYTHON_USEDEP}]
+	dev-python/progressbar[${PYTHON_USEDEP}]
+	dev-python/psutil[${PYTHON_USEDEP}]
+	dev-python/sqlalchemy[${PYTHON_USEDEP}]
+	dev-python/mysql-python[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
 
-
-src_configure() {
-	# --enable-debug  do not strip debugging symbols (default no)
-	econf --enable-debug
+python_install() {
+	python_domodule Tank
+	python_domodule tankcore.py
+	python_doscript tank.py
 }
 
+src_install() {
+	python_foreach_impl python_install
+	dobashcomp *.completion
+	dodoc README.md
+}
