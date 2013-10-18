@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="<sys-devel/binutils-2.23"
 RDEPEND="${DEPEND}"
 
 src_compile() {
