@@ -4,6 +4,7 @@
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_DEPEND="2"
 
 DESCRIPTION="Console application to test websites perfomance"
@@ -19,7 +20,8 @@ DEPEND="dev-python/lxml
 	dev-python/ipaddr
 	dev-python/progressbar
 	dev-python/psutil
-	dev-python/sqlalchemy"
+	dev-python/sqlalchemy
+	dev-python/mysql-python"
 RDEPEND="${DEPEND}"
 
 
