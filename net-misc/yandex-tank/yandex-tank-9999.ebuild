@@ -20,8 +20,7 @@ DEPEND="dev-python/lxml
 	dev-python/ipaddr
 	dev-python/progressbar
 	dev-python/psutil
-	dev-python/sqlalchemy
-	dev-python/mysql-python"
+	dev-python/sqlalchemy"
 RDEPEND="${DEPEND}"
 
 
