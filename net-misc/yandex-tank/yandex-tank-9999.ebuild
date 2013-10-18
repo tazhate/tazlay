@@ -35,4 +35,7 @@ src_install() {
 	python_foreach_impl python_install
 	dobashcomp *.completion
 	dodoc README.md
+	dodir /etc/yandex-tank
+	insinto /etc/yandex-tank/
+	doins 00-base.ini
 }
