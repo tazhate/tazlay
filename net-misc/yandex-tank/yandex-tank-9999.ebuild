@@ -22,8 +22,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/ipaddr[${PYTHON_USEDEP}]
 	dev-python/progressbar[${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
-	dev-python/sqlalchemy[${PYTHON_USEDEP}]
-	dev-python/mysql-python[${PYTHON_USEDEP}]"
+	dev-python/sqlalchemy[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 python_install() {
