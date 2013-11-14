@@ -7,6 +7,6 @@ Just add it through usual way.
 
 It contains:
 
-1) yandex-tank gentoo ebuild
-
-2) phantom gentoo ebuild (yandex-tank dependecy)
+- yandex-tank gentoo ebuild
+- phantom gentoo ebuild (yandex-tank dependecy)
+- telegram cli
