@@ -22,7 +22,7 @@ DEPEND="sys-libs/readline
 RDEPEND="${DEPEND}"
 
 src_compile() {
-    emake -R CXX="$(tc-getCXX)"
+    emake
 }
 
 src_install() {
